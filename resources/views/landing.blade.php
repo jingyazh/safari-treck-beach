@@ -11,6 +11,7 @@
     <link href=" {{ mix('css/app.css') }}" rel="stylesheet">
     <link href=" {{ mix('css/custom.css') }}" rel="stylesheet">
     <link href=" {{ mix('css/temp.css') }}" rel="stylesheet">
+    <link href=" {{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -19,6 +20,7 @@
     </div>
     <script src="{{ mix('js/bootstrap.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
+    <link href="{{ asset('js/bootstrap.min.js') }}" rel="stylesheet">
 </body>
 
 </html>
