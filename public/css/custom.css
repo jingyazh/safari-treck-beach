@@ -106,5 +106,133 @@
     padding: 20px;
     background-color: #fff;
 }
+.popular-tours {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+.content {
+    width: 100%;
+}
+.tour-card .card-body {
+    padding: 0px !important;
+}
+.popular_tours_2 {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+.tourTitle {
+    width: 100%;
+    margin-top: -90px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    padding-left: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.9) 100%);
+}
+.tourTitle h2 a {
+    color: white !important;
+}
+.tourTitle h2 {
+    text-align: center;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    padding: 0;
+    margin: 40px 0 12px 0;
+}
+.card-detail {
+    text-align: start;
+    padding: 5px 10px 5px 10px;
+}
+.popular-tours {
+    background-color: white;
+}
+#about {
+    background-color: rgb(231, 231, 231);
+}
+.tour-card-review {
+    justify-content: space-evenly;
+    border-top: 1px dotted black;
+}
+.pack-name-rate {
+    padding-left: 0px !important;
+    justify-content: start;
+    text-align: start;
+}
+.money_right {
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 7px;
+    border-left: 1px dotted black;
+    position: absolute;
+}
+.img-fluid {
+    width: 100%;
+}
+.trek-btn {
+    background-color: #ff294b !important;
+    font-size: 16px !important;
+    color: white !important;
+    font-weight: bolder !important;
+}
+.trek-btn:hover {
+    background-color: #212529 !important;
+}
+.why_us {
+    background-image: linear-gradient(to bottom, rgba(210, 211, 218, 0), rgba(0, 0, 0, 0.73)), url(/images/WHY-CHOOSE-US_1.jpg?805742b1fa472895a93e95450fbeee7c);
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#about {
+    background-size: cover;
+    padding: 60px 0 0 0 !important;
+    position: relative;
+}
+.dest-section {
+    background-color: transparent !important;
+}
+.review_section {
+    position: relative;
+    padding: 60px 0px 70px;
+    background-image: linear-gradient(to bottom, rgba(210, 211, 218, 0), rgba(0, 0, 0, 0.73)), url(/images/REVIEWS_&_TESTIMONIES_5.jpg?ccd3270acbd5af5b199fb175a5c59b17);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.h-about-us-image {
+    width: 100%;
+}
+.h-about-us-text {
+    font-size: 1rem !important;
+}
+.heading1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #0f1a2e;
+}
+.bg-footer {
+    width: 100%;
+    background-color: #0f1a2e !important;
+}
+footer ul li {
+    display: list-item !important;
+}
 
-
+.footer_design {
+    background-color: #0f1a2e;
+}
+footer ul li:first-child a {
+    margin-left: 0px !important;
+}
+footer ul li a {
+    padding: 5px !important;
+}
+.container, .container-fluid {
+    display: block !important;
+}

@@ -2,16 +2,23 @@
   <div class="flex-center position-ref full-height">
     <div class="content">
       <div class="home-filter"></div>
-      <div class="m-b-md">
-        <div class="section-header">
-          <h3>Popular tours</h3>
-        </div>
-        <div class="container">
-          <div class="col-md-4 popular_tours_2">
-            
-          </div>
-        </div>
-      </div>
+      <!-- Popular Tour -->
+      <tour-intro></tour-intro>
+
+      <!-- Why Choose US -->
+      <why-us></why-us>
+
+      <!-- Our Top Descriptions -->
+      <top-destination></top-destination>
+
+      <!-- Reviews & Testimonials -->
+      <testimonial></testimonial>
+
+      <!-- About Us -->
+      <about-us></about-us>
+
+      <!-- From Our Blog -->
+      <blog></blog>
     </div>
   </div>
 </template>
@@ -19,6 +26,12 @@
 </style>
 
 <script>
+import AboutUs from "./home_sections/AboutUs.vue";
+import Blog from "./home_sections/Blog.vue";
+import Testimonial from "./home_sections/Testimonial.vue";
+import TopDestination from "./home_sections/TopDestination.vue";
+import TourIntro from "./home_sections/TourIntro.vue";
+import WhyUs from "./home_sections/WhyUs.vue";
 export default {
   props: {
     image: {
@@ -33,6 +46,14 @@ export default {
         width: "100%",
       };
     },
+  },
+  components: {
+    WhyUs,
+    TourIntro,
+    TopDestination,
+    Testimonial,
+    AboutUs,
+    Blog,
   },
 };
 </script>

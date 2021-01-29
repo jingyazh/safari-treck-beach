@@ -12,15 +12,16 @@
     <link href=" {{ mix('css/custom.css') }}" rel="stylesheet">
     <link href=" {{ mix('css/temp.css') }}" rel="stylesheet">
     <link href=" {{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href=" {{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div id="app">
         <app></app>
     </div>
-    <script src="{{ mix('js/bootstrap.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
-    <link href="{{ asset('js/bootstrap.min.js') }}" rel="stylesheet">
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
 
 </html>
