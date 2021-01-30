@@ -94,19 +94,19 @@
               <ul class="list-unstyled">
                 <li class="footerList">
                   <a href="#" class="footerLink"
-                    ><span class="fa fa-map-marker mr-3"></span> NSSF Mafao
+                    ><i class="fas fa-map-marker-alt mr-3"></i> NSSF Mafao
                     House Arusha Tanzania</a
                   >
                 </li>
                 <li class="footerList on-mob">
                   <a href="#" class="footerLink"
-                    ><span class="fa fa-phone-square mr-2"></span> +255
+                    ><i class="fas fa-phone-square mr-2"></i> +255
                     758-022-567</a
                   >
                 </li>
                 <li class="footerList on-mob-info">
                   <a href="#" class="footerLink"
-                    ><span class="fa fa-envelope mr-2"></span>
+                    ><i class="fas fa-envelope mr-2"></i>
                     info@africasafaribooking.com</a
                   >
                 </li>
@@ -119,16 +119,16 @@
             <div class="row d-flex py-4 align-item-center">
               <div class="col-md-12 text-center">
                 <a href="#"
-                  ><i class="fa fa-facebook-f fa-2x text-light mr-4"></i
+                  ><i class="fab fa-facebook-f fa-2x text-light mr-4"></i
                 ></a>
                 <a href="#"
-                  ><i class="fa fa-instagram fa-2x text-light mr-4"></i
+                  ><i class="fab fa-instagram fa-2x text-light mr-4"></i
                 ></a>
                 <a href="#"
-                  ><i class="fa fa-twitter fa-2x text-light mr-4"></i
+                  ><i class="fab fa-twitter fa-2x text-light mr-4"></i
                 ></a>
                 <a href="#"
-                  ><i class="fa fa-youtube fa-2x text-light mr-4"></i
+                  ><i class="fab fa-youtube fa-2x text-light mr-4"></i
                 ></a>
               </div>
             </div>

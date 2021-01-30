@@ -1,20 +1,19 @@
 <template>
   <div class="col-lg-4 col-md-6 col-sm-12">
     <b-card
-      title="Exclusive Safaris In Tanzania"
-      img-src="/assets/img/img1.jpg"
+      :title="blog.title"
+      :img-src="blog.image"
       img-alt="Image"
       img-top
       tag="article"
-      class="mb-2"
+      class="mb-2 blog-card"
     >
       <hr />
-      <b-card-text>
-        Night game drive Safari Tour gives you the best opportunity to see
-        nocturnal animals that are hard to see during...
+      <b-card-text class="blog-card-text">
+        {{blog.detail}}
       </b-card-text>
 
-      <a href="#" variant="primary">Read more >></a>
+      <a href="#" variant="primary">Read more <i class="fas fa-angle-double-right ml-2"></i></a>
     </b-card>
   </div>
 </template>
@@ -24,5 +23,6 @@
 <script>
 export default {
   name: "blog-card",
+  props: ['blog']
 };
 </script>

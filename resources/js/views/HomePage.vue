@@ -1,7 +1,9 @@
  <template>
   <div class="flex-center position-ref full-height">
     <div class="content">
-      <div class="home-filter"></div>
+      <!-- Search -->
+      <home-search></home-search>
+
       <!-- Popular Tour -->
       <tour-intro></tour-intro>
 
@@ -28,24 +30,15 @@
 <script>
 import AboutUs from "./home_sections/AboutUs.vue";
 import Blog from "./home_sections/Blog.vue";
+import HomeSearch from './home_sections/HomeSearch.vue';
 import Testimonial from "./home_sections/Testimonial.vue";
 import TopDestination from "./home_sections/TopDestination.vue";
 import TourIntro from "./home_sections/TourIntro.vue";
 import WhyUs from "./home_sections/WhyUs.vue";
 export default {
   props: {
-    image: {
-      type: String,
-      default: "/assets/img/TRY-1.jpg",
-    },
   },
   computed: {
-    homeBackground() {
-      return {
-        backgroundImage: `url(${this.image})`,
-        width: "100%",
-      };
-    },
   },
   components: {
     WhyUs,
@@ -54,6 +47,7 @@ export default {
     Testimonial,
     AboutUs,
     Blog,
+    HomeSearch,
   },
 };
 </script>

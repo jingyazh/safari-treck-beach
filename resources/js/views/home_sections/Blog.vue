@@ -6,9 +6,11 @@
     <div class="">
       <div class="container dest-section">
         <div class="row">
-          <blog-card></blog-card>
-          <blog-card></blog-card>
-          <blog-card></blog-card>
+          <blog-card
+            v-for="blog in blogs"
+            :blog="blog"
+            :key="blog.id"
+          ></blog-card>
         </div>
       </div>
     </div>
@@ -17,7 +19,7 @@
         <center>
           <a href="#">
             <button class="btn trek-btn">
-              View All Packages <i class="fa fa-angle-right"></i>
+              View All <i class="fas fa-angle-right"></i>
             </button>
           </a>
         </center>
@@ -31,8 +33,31 @@
 
 <script>
 import BlogCard from "../components/BlogCard.vue";
+import axios from "axios";
+import blog from "./fake_api/blog";
 export default {
   components: { BlogCard },
   name: "blog",
+  data() {
+    return {
+      blogs: [],
+    };
+  },
+  props: ["blog"], /// This variable is used in HomeTourCard.vue component.
+  created() {},
+  mounted() {
+    // Getting data
+    this.getData();
+  },
+  methods: {
+    getData: function () {
+      /////// Get data here in order to use data in this component.
+      // axios.get("/api/getting").then((response) => {
+      // this.tours = response.data.blog;
+      // });
+
+      this.blogs = blog; /// For now we are using static schema.
+    },
+  },
 };
 </script>

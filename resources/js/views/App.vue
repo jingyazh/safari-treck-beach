@@ -1,30 +1,17 @@
  <template>
-  <div id="material-kit" :style="homeBackground">
-    <div>
+  <div id="material-kit">
+    <div :class="{ 'nav-open': NavbarStore.showNavbar }">
       <router-view name="header" />
       <div>
         <router-view />
       </div>
       <router-view name="footer" />
+      <router-view name="end" />
     </div>
   </div>
 </template>
 
  <script>
-import NavbarStore from "vue";
 export default {
-  props: {
-    image: {
-      type: String,
-      default: '/assets/img/TRY-1.jpg'
-    }
-  },
-  computed: {
-    homeBackground() {
-      return {
-        backgroundImage: `url(${this.image})`,
-      };
-    }
-  }
 };
 </script>

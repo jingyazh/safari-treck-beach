@@ -10,6 +10,17 @@ require('./bootstrap');
 Vue.use(MaterialKit)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+const NavbarStore = {
+    showNavbar: false
+};
+
+Vue.mixin({
+    data() {
+        return {
+            NavbarStore
+        };
+    }
+});
 const app = new Vue({
     el: '#app',
     components: { App },

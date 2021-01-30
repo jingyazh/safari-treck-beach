@@ -221,11 +221,6 @@ h6 {
     font-weight: 700;
 }
 
-#intro p {
-    width: 80%;
-    margin: 0 auto 30px auto;
-    color: #fff;
-}
 
 #intro .carousel-fade {
     overflow: hidden;
@@ -1930,9 +1925,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
     .over-ml-3 {
         margin-left: 0;
-    }
-    .input3 {
-        width: 310px;
     }
     .about_div {
         display: inline-block;

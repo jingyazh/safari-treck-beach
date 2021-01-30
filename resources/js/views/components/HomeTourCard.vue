@@ -4,47 +4,45 @@
       <div style="position: relative">
         <a href="#">
           <b-img
-            src="/assets/img/NGORONGORO_CRATER_3.jpg"
+            :src="tour.image"
             fluid
             alt="ngorongoro crater 3"
           ></b-img>
         </a>
         <div class="tourTitle">
           <h2>
-            <a href="#">3-Day Ngorongoro &amp; Serengeti Budget Tour</a>
+            <a href="#">{{tour.title}}</a>
           </h2>
         </div>
       </div>
       <div class="card-detail">
+        <div class="float-right tag_div">
+          <img :src="tour.badge" srcset="" class="tag_icon" />
+        </div>
         <div class="pb-2">
           <strong> Acomodation: </strong>
-          Budget, Camping
+          {{tour.accomodation}}
         </div>
         <div class="pb-2">
           <strong> Tour Type: </strong>
-          Group
+          {{tour.tour_type}}
         </div>
         <div class="pb-2">
           <strong> Trip Route: </strong>
-          Arusha (Start), Ngorongoro crater, Serengeti National Pa..., Arusha
-          (End)
+          {{tour.trip_route}}
         </div>
       </div>
       <div class="col-md-12 tour-card-review">
         <div class="pack-name-rate">
-          <div>Meru Slopes Tours and Safaris</div>
+          <div>{{tour.review.title}}</div>
           <span class="star-rating">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
+            <span v-for="x in [1, 2, 3, 4, 5]" :key="x" class="fas fa-star" :class="rate(x)"></span>
           </span>
-          <small>(Reviews: 49)</small>
+          <small>(Reviews: {{tour.review.review_amount}})</small>
         </div>
         <div class="money_right">
-          <i class="fa fa-dollar money_color"></i
-          ><strong class="money_color">599</strong>
+          <i class="fas fa-dollar-sign money_color"></i
+          ><strong class="money_color">{{tour.review.cost}}</strong>
           <small class="money_color">pp</small>
         </div>
       </div>
@@ -54,34 +52,17 @@
 <script>
 export default {
   name: "tour-card",
-  props: {
-    direction: {
-      type: String,
-      default: "down",
-    },
-    multiLevel: {
-      type: Boolean,
-      default: false,
-    },
-    title: String,
-    icon: String,
-  },
-  data() {
-    return {
-      isOpen: false,
-    };
+  props: ['tour'],
+  created() {
   },
   methods: {
-    toggleDropDown() {
-      if (this.multiLevel) {
-        this.isOpen = true;
+    rate(x) {
+      if (x <= this.tour.review.rate){
+        return "checked"
       } else {
-        this.isOpen = !this.isOpen;
+        return ''
       }
-    },
-    closeDropDown() {
-      this.isOpen = false;
-    },
+    }
   },
 };
 </script>

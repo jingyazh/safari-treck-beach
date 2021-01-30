@@ -1,3 +1,13 @@
+body {
+    background: rgb(231, 231, 231);
+    /* background-color: #a99977; */
+    /* color: #666666; */
+    font-size: 1rem !important;
+    font-family: "Open Sans", sans-serif;
+}
+p {
+    font-size: 1rem !important;
+}
 #toolbar {
     padding: 20px 0;
     height: 72px;
@@ -26,13 +36,13 @@
     text-transform: uppercase;
     outline: none;
 }
-#material-kit {
-    /* display: table; */
-    width: 100%;
+
+#intro {
+    background-image: url(/assets/img/TRY-1.jpg);
     height: 80vh;
     background-size: cover;
     background-attachment: fixed;
-    background-position-y: -20vh;
+    background-position-y: -20vh !important;
 }
 .full-height {
     /* height: 200vh; */
@@ -114,7 +124,7 @@
 .content {
     width: 100%;
 }
-.tour-card .card-body {
+.tour-card .card-body, .dest-card .card-body {
     padding: 0px !important;
 }
 .popular_tours_2 {
@@ -197,6 +207,7 @@
 }
 .dest-section {
     background-color: transparent !important;
+    padding-top: 20px;
 }
 .review_section {
     position: relative;
@@ -235,4 +246,167 @@ footer ul li a {
 }
 .container, .container-fluid {
     display: block !important;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+.mt-3 {
+    font-size: 1rem !important;
+}
+hr:not([size]) {
+    height: 0.5px !important;
+}
+.footer-copyright .mt-3 {
+    margin-bottom: 1.5rem !important;
+}
+.dest-card {
+    transition: margin-top .3s
+}
+.dest-card:hover {
+    margin-top: -5%;
+}
+.destTitle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+.destTitle h2 a {
+    color: white !important;
+}
+.destTitle h2 {
+    margin-top: 75px;
+    margin-left: 37px;
+    letter-spacing: 1px;
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    width: 170px;
+    font-family: coolvetica;
+    text-transform: uppercase;
+}
+.blog-card {
+    text-align: start;
+    font-size: 1rem !important;
+    transition: margin-top .3s;
+}
+.blog-card:hover {
+    margin-top: -3%;
+}
+.blog-card a {
+    color: black !important;
+}
+.tag_icon {
+    height: auto !important;
+    max-height: 80px !important;
+    width: auto !important;
+    max-width: 80px;
+    display: flex;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+.tag_div {
+    margin-top: -17px !important;
+    right: 5px !important;
+    flex-direction: column;
+    justify-items: start;
+}
+#intro {
+    height: 80vh !important;
+}
+.filter-pv {
+    background-color: white;
+
+}
+.filter-pv i {
+    padding: 15px;
+    padding-right: 5px;
+}
+.search-btn {
+    line-height: 3.15rem;
+    background-color: #ff294b;
+    color: white;
+    font-weight: 700;
+    width: 100% !important;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background-color:rgba(0, 0, 0, 0.4);
+}
+.form-control:focus {
+    box-shadow: none !important;
+}
+.input-group {
+    flex-wrap: nowrap !important;
+}
+.home_input .form-control {
+    height: 100% !important;
+    border: none !important;
+    width: unset !important;
+}
+.home_input .form-group .input-group i {
+    font-size: 1.3rem;
+}
+.home_input {
+    padding: 3px !important;
+}
+.dropdown .dropdown-menu {
+    opacity: 1 !important;
+}
+
+.destinationList option li.multiline {
+    height: 2.875rem;
+    line-height: 1.875rem;
+    font-weight: bold;
+    font-size: .875rem;
+}
+.destinationList option li+li {
+    border-top: 1px solid #d9d9d9;
+}
+.destinationList option li {
+    z-index: 10;
+    position: relative;
+    background-color: #fff;
+    color: #0378a0;
+    line-height: 2.125rem;
+    cursor: pointer;
+    padding: 0 .625rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.destinationList option li.multiline span.capitalize {
+    position: absolute;
+    font-weight: normal;
+    top: 1rem;
+    left: .625rem;
+    float: none;
+    width: auto;
+}
+#dropdownMenuButton {
+    padding-left: 0px !important;
+}
+.d-block {
+    white-space: nowrap;
+}
+.dropdown-menu.show {
+    display: block;
+    padding: 11px;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+}
+.dropdown-menu .d-flex {
+    justify-content: space-between;
 }
