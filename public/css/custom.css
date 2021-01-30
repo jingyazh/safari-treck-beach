@@ -410,3 +410,21 @@ hr:not([size]) {
 .dropdown-menu .d-flex {
     justify-content: space-between;
 }
+#dropdownMenuButton {
+    width: 1px; 
+    height: 1px;
+    margin-top: -1px;
+}
+.travellerTip {
+    background: white;
+    color: black;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: -10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.travellerTip .d-flex {
+    justify-content: space-between;
+}

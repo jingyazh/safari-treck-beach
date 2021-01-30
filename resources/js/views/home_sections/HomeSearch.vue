@@ -60,7 +60,6 @@
                   <div class="input-group mb-3 filter-pv">
                     <i class="fas fa-calendar-alt"></i>
                     <div class="d-flex">
-                      <!-- <input type="text" name="destination" class="form-control input3" placeholder="Destination" id="destination" autocorrect="off" autocomplete="off" data-autocomplete="destination"> -->
                       <input
                         type="date"
                         name="start_date"
@@ -80,54 +79,62 @@
                   <div class="input-group mb-3 filter-pv">
                     <i class="fas fa-users"></i>
                     <div class="d-flex">
-                      <!-- <input type="text" name="destination" class="form-control input3" placeholder="Destination" id="destination" autocorrect="off" autocomplete="off" data-autocomplete="destination"> -->
                       <div class="dropdown">
                         <div
                           class="form-control"
-                          id="dropdownMenuButton"
                           aria-haspopup="true"
                           aria-expanded="false"
-                          data-toggle="dropdown"
-                          v-on:click="onOpenSelector"
                         >
-                          <input
+                          <p-button
                             type="text"
                             readonly
-                            placeholder="Travellers"
-                            value=""
+                            id="tooltip-button-1"
                             class="form-control input3"
-                          />
+                            style="background: transparent;"
+                            v-on:click="showTravMod = !showTravMod"
+                          >
+                          Adults {{travellers.adult}}, Children {{travellers.children}}
+                          </p-button>
                         </div>
-                        <div
-                          class="dropdown-menu w-100"
-                          aria-labelledby="dropdownMenuButton"
+                        <div id="tooltip-button-1"></div>
+                        <b-tooltip
+                          :showTravMod.sync="showTravMod"
+                          target="tooltip-button-1"
+                          placement="bottom"
+                          variant="secondary"
                         >
-                          <div class="d-flex pb-2">
-                            <div class="d-block">
-                              <span> <strong>Adult</strong>(18+ yrs): </span>
+                          <div
+                            class="travellerTip"
+                          >
+                            <div class="d-flex pb-2">
+                              <div class="d-block">
+                                <span> <strong>Adult</strong>(18+ yrs): </span>
+                              </div>
+                              <div class="d-block">
+                                <b-button-group>
+                                  <b-button squared @click="handleMinus(1)">-</b-button>
+                                  <b-button disabled squared>{{travellers.adult}}</b-button>
+                                  <b-button squared @click="handlePlus(1)">+</b-button>
+                                </b-button-group>
+                              </div>
                             </div>
-                            <div class="d-block">
-                              <b-button-group>
-                                <b-button squared>-</b-button>
-                                <b-button disabled squared>2</b-button>
-                                <b-button squared>+</b-button>
-                              </b-button-group>
-                            </div>
-                          </div>
 
-                          <div class="d-flex">
-                            <div class="d-block">
-                              <span> <strong>Children</strong>(0-17yrs): </span>
-                            </div>
-                            <div class="d-block">
-                              <b-button-group>
-                                <b-button squared>-</b-button>
-                                <b-button disabled squared>2</b-button>
-                                <b-button squared>+</b-button>
-                              </b-button-group>
+                            <div class="d-flex">
+                              <div class="d-block">
+                                <span>
+                                  <strong>Children</strong>(0-17yrs):
+                                </span>
+                              </div>
+                              <div class="d-block">
+                                <b-button-group>
+                                  <b-button squared @click="handleMinus(2)">-</b-button>
+                                  <b-button disabled squared>{{travellers.children}}</b-button>
+                                  <b-button squared @click="handlePlus(2)">+</b-button>
+                                </b-button-group>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </b-tooltip>
                       </div>
                     </div>
                   </div>
@@ -157,7 +164,12 @@ export default {
   data: function () {
     return {
       destination: "",
-      start_date: ''
+      start_date: "",
+      showTravMod: false,
+      travellers: {
+        adult: 0,
+        children: 0
+      }
     };
   },
   methods: {
@@ -166,13 +178,32 @@ export default {
       $(this).parent().toggleClass("open");
     },
     handleDest: function (e) {
-      console.log(this.destination)
+      console.log(this.destination);
       this.destination = e.target.value;
     },
     handleDate: function (e) {
-      console.log(this.start_date)
+      console.log(this.start_date);
       this.start_date = e.target.value;
     },
+    handleMinus: function(type) {
+      if (type == 1){
+        this.travellers.adult -= 1;
+        this.travellers.adult = Math.max(0, this.travellers.adult)
+      }
+      if (type == 2){
+        this.travellers.children -= 1;
+        this.travellers.children = Math.max(0, this.travellers.children)
+      }
+    },
+    handlePlus: function(type) {
+      if (type == 1){
+        this.travellers.adult += 1;
+      }
+      if (type == 2){
+        this.travellers.children += 1;
+        this.travellers.children = Math.min(10, this.travellers.children)
+      }
+    }
   },
 };
 </script>
